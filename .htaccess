@@ -1,0 +1,23 @@
+ErrorDocument 403 /somethingbadhappened?errorcode=403
+ErrorDocument 400 /somethingbadhappened?errorcode=400
+ErrorDocument 401 /somethingbadhappened?errorcode=401
+ErrorDocument 404 /somethingbadhappened?errorcode=404
+ErrorDocument 405 /somethingbadhappened?errorcode=405
+ErrorDocument 408 /somethingbadhappened?errorcode=408
+ErrorDocument 500 /somethingbadhappened?errorcode=500
+ErrorDocument 501 /somethingbadhappened?errorcode=501
+ErrorDocument 502 /somethingbadhappened?errorcode=502
+ErrorDocument 503 /somethingbadhappened?errorcode=503
+ErrorDocument 504 /somethingbadhappened?errorcode=504
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE image/png
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
