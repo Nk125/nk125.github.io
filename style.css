@@ -19,7 +19,7 @@ body {
     position: sticky;
 }
 
-.navbar li a {
+a {
     text-decoration: none;
     width: 100px;
     height: 100px;
@@ -30,7 +30,7 @@ body {
     
 }
 
-.navbar li a:hover {
+a:hover {
     background-color: crimson;
     color: cornflowerblue;
     cursor: pointer;
