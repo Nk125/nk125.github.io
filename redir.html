@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <noscript>You need javascript to show this page</noscript>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("link")) {
+      window.location.replace(urlParams.get("link"));
+    }
+    else {
+      alert("No link set!!!!");
+      window.location.replace(window.location.origin);
+    }
+  </script>
+</body>
